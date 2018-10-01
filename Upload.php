@@ -150,7 +150,7 @@ class Widget_Upload extends Widget_Abstract_Contents implements Widget_Interface
 
         //返回相对存储路径
         return array(
-            'name' => $file['name'],
+            'name' => $fileName,
             'path' => (defined('__TYPECHO_UPLOAD_DIR__') ? __TYPECHO_UPLOAD_DIR__ : self::UPLOAD_DIR) 
                 . '/' . $fileName,
             'size' => $file['size'],
@@ -162,7 +162,7 @@ class Widget_Upload extends Widget_Abstract_Contents implements Widget_Interface
 
     /*
     这里同样更改反馈的路径为没有子目录的形式
-
+    'name' => $file['name'],
     'path' => (defined('__TYPECHO_UPLOAD_DIR__') ? __TYPECHO_UPLOAD_DIR__ : self::UPLOAD_DIR) 
                 . '/' . $date->year . '/' . $date->month . '/' . $fileName,
     
